@@ -6,10 +6,9 @@ metadata:
     app: guestbook
     name: guestbook-app-lb
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
-    - port: 8080
-      targetPort: 80
+    - port: 80
   selector:
     app: guestbook
     name: guestbook-pod
